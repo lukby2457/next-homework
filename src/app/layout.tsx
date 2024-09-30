@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <header
-          className="flex justify-between"
+          className="flex justify-around"
         >
           <Link href={"/"}>Home</Link>
           <Link href={"/champions"}>Champions</Link>

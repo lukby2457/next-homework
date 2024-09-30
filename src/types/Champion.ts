@@ -1,3 +1,12 @@
+export interface GetChampion {
+  type: string;
+  format: string;
+  version: string;
+  data: {
+    [key: string]: Champion;
+  }
+}
+
 export interface Champion {
   version: string;
   id: string;
@@ -23,6 +32,15 @@ export interface Champion {
   tags: string[];
   partype: string;
   stats: object;
+}
+
+export interface GetChampionDetail {
+  type: string;
+  format: string;
+  version: string;
+  data: {
+    [key: string]: ChampionDetail;
+  }
 }
 
 export interface ChampionDetail {
