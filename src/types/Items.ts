@@ -29,6 +29,8 @@ export type Item = {
     sell: number;
   };
   tags: string[];
-  maps: object;
+  maps: {
+    [key: string]: string;
+  };
   stats: object;
 }

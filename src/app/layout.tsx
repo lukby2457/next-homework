@@ -29,9 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header
-          className="flex justify-around"
-        >
+        <header className="flex justify-around">
           <Link href={"/"}>Home</Link>
           <Link href={"/champions"}>Champions</Link>
           <Link href={"/items"}>Items</Link>

@@ -1,13 +1,13 @@
-import { ChampionDetail } from '@/types/Champion';
-import { fetchChampionDetail } from '@/utils/serverApi';
-import Image from 'next/image';
-import React from 'react'
+import { ChampionDetail } from "@/types/Champion";
+import { fetchChampionDetail } from "@/utils/serverApi";
+import Image from "next/image";
+import React from "react";
 
 type Props = {
   params: {
     id: string;
-  }
-}
+  };
+};
 
 const page = async ({ params }: Props) => {
   const data: ChampionDetail = await fetchChampionDetail(params.id);
@@ -16,11 +16,11 @@ const page = async ({ params }: Props) => {
     <>
       <div>{data.name}</div>
       <div>{data.title}</div>
-      <Image 
+      <Image
         src={`https://ddragon.leagueoflegends.com/cdn/14.19.1/img/champion/${data.image.full}`}
         alt={data.name}
-        width={200} 
-        height={200} 
+        width={200}
+        height={200}
       />
       <div>{data.lore}</div>
       <div>
@@ -33,7 +33,7 @@ const page = async ({ params }: Props) => {
         </ul>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default page
+export default page;

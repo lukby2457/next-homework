@@ -1,3 +1,5 @@
+import { ChampionRotation } from "@/types/ChampionRotation";
+
 const RIOT_API_KEY: string | undefined = process.env.RIOT_API_KEY;
 
 export async function GET() {
@@ -8,7 +10,7 @@ export async function GET() {
     }
   });
 
-  const data = await res.json();
+  const data: ChampionRotation = await res.json();
   const newData = data.freeChampionIds;
 
   return Response.json({ data: newData });
