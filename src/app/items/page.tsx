@@ -1,23 +1,25 @@
+import { BASE_URL } from "@/public/static";
 import { Item } from "@/types/Items";
-import { fetchItemList } from "@/utils/serverApi";
+import { fetchItemList, getVersion } from "@/utils/serverApi";
 import Image from "next/image";
 import React from "react";
 
 const ItemsPage = async () => {
+  const version = await getVersion();
   const data: Item[] = await fetchItemList();
 
   return (
-    <>
+    <main className="main">
       <div>ItemsPage</div>
-      <div className="grid grid-cols-6 gap-1 max-w-[1200px] mx-auto justify-items-center">
+      <div className="grid grid-cols-6 gap-1  mx-auto justify-items-center">
         {data.map((item: Item) => {
           return (
             <div
               key={item.name}
-              className="w-[190px] min-h-[150px] max-h-[500px] border-white border-[1px] mb-2"
+              className="w-[160px] min-h-[150px] max-h-[500px] border-white border-[1px] mb-2"
             >
               <Image
-                src={`https://ddragon.leagueoflegends.com/cdn/14.19.1/img/item/${item.image.full}`}
+                src={`${BASE_URL}/${version}/img/item/${item.image.full}`}
                 alt={item.image.full}
                 width={100}
                 height={100}
@@ -32,7 +34,7 @@ const ItemsPage = async () => {
           );
         })}
       </div>
-    </>
+    </main>
   );
 };
 

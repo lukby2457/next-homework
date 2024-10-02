@@ -6,4 +6,4 @@ export type ChampionRotation = {
 
 export type RotationChampionList = {
   [key: string]: number[];
-}
+};

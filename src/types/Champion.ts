@@ -4,7 +4,7 @@ export interface GetChampion {
   version: string;
   data: {
     [key: string]: Champion;
-  }
+  };
 }
 
 export interface Champion {
@@ -34,13 +34,17 @@ export interface Champion {
   stats: object;
 }
 
+export interface addImgChampion extends Champion {
+  imgPath: string;
+}
+
 export interface GetChampionDetail {
   type: string;
   format: string;
   version: string;
   data: {
     [key: string]: ChampionDetail;
-  }
+  };
 }
 
 export interface ChampionDetail {

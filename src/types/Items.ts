@@ -4,8 +4,8 @@ export type GetItem = {
   basic: object;
   data: {
     [key: string]: Item;
-  }
-}
+  };
+};
 
 export type Item = {
   name: string;
@@ -33,4 +33,4 @@ export type Item = {
     [key: string]: string;
   };
   stats: object;
-}
+};

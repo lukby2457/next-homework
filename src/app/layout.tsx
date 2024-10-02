@@ -29,11 +29,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="flex justify-around">
-          <Link href={"/"}>Home</Link>
-          <Link href={"/champions"}>Champions</Link>
-          <Link href={"/items"}>Items</Link>
-          <Link href={"/rotation"}>Rotation</Link>
+        <header className="bg-gray-800  py-4 fixed top-0 w-full z-10">
+          <div className="mx-auto flex justify-around w-[1200px]">
+            <Link href={"/"}>Home</Link>
+            <Link href={"/champions"}>Champions</Link>
+            <Link href={"/items"}>Items</Link>
+            <Link href={"/rotation"}>Rotation</Link>
+          </div>
         </header>
         {children}
       </body>
