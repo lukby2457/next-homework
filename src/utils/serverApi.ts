@@ -1,7 +1,11 @@
 "use server";
 
 import { BASE_URL } from "@/public/static";
-import { addImgChampion, GetChampion, GetChampionDetail } from "@/types/Champion";
+import {
+  addImgChampion,
+  GetChampion,
+  GetChampionDetail,
+} from "@/types/Champion";
 import { GetItem, Item } from "@/types/Items";
 
 export async function getVersion() {
@@ -24,11 +28,11 @@ export async function fetchChampionList() {
   });
   const data: GetChampion = await res.json();
   const championData: addImgChampion[] = Object.values(data.data)
-  .sort((a, b) => a.name.localeCompare(b.name))
-  .map(champion => ({
-    ...champion,
-    imgPath: `${BASE_URL}/${version}/img/champion/${champion.id}.png`
-  }));
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map((champion) => ({
+      ...champion,
+      imgPath: `${BASE_URL}/${version}/img/champion/${champion.id}.png`,
+    }));
 
   return championData;
 }

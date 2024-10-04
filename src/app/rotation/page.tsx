@@ -22,8 +22,8 @@ const RotationPage = () => {
 
   return (
     <main className="main">
-      <div>RotationPage</div>
-      <div className="grid grid-cols-5 gap-16 max-w-[1200px] mx-auto justify-items-center">
+      <div className="pageTitle">챔피언 로테이션</div>
+      <div className="cardContainer grid-cols-5 gap-16">
         {champions.map((champion: addImgChampion) => {
           return <ChampionCard key={champion.id} champion={champion} />;
         })}

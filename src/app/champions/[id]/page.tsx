@@ -20,8 +20,8 @@ const Detailpage = async ({ params }: Props) => {
       <Image
         src={`${BASE_URL}/img/champion/loading/${data.id}_0.jpg`}
         alt={data.name}
-        width={250}
-        height={453.75}
+        width={308}
+        height={560}
       />
       <div>{data.lore}</div>
       <div>

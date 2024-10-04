@@ -6,7 +6,7 @@ import React from "react";
 const ChampionCard = ({ champion }: { champion: addImgChampion }) => {
   return (
     <Link
-      className="w-[180px] h-[150px] border-white border-[1px]"
+      className="w-[180px] h-[235px] border-white border-[1px]"
       href={`/champions/${champion.id}`}
     >
       <div>
@@ -16,10 +16,10 @@ const ChampionCard = ({ champion }: { champion: addImgChampion }) => {
           width={100}
           height={100}
           priority
-          className="mx-auto"
+          className="mx-auto mt-[19px]"
         />
-        <h4>{champion.name}</h4>
-        <p>{champion.title}</p>
+        <h4 className="cardTitle">{champion.name}</h4>
+        <p className="cardContent mb-[19px]">{champion.title}</p>
       </div>
     </Link>
   );
