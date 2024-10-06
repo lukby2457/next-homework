@@ -15,7 +15,6 @@ const ChampionCard = ({ champion }: { champion: addImgChampion }) => {
           alt={champion.name}
           width={100}
           height={100}
-          priority
           className="mx-auto mt-[19px]"
         />
         <h4 className="cardTitle">{champion.name}</h4>

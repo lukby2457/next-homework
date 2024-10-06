@@ -8,7 +8,7 @@ const ChampionsPage = async () => {
 
   return (
     <main className="main">
-      <div className="pageTitle">챔피언 목록</div>
+      <h1 className="pageTitle">챔피언 목록</h1>
       <div className="cardContainer grid-cols-6 gap-6">
         {data.map((champion: addImgChampion) => {
           return <ChampionCard key={champion.id} champion={champion} />;

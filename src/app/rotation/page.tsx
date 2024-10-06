@@ -7,8 +7,12 @@ import React, { useEffect, useState } from "react";
 
 const fetchRotation = async () => {
   const url = window.location.origin;
-  const data = await getChampionRotation(url);
-  return data;
+  const res = await getChampionRotation(url);
+  console.log(res);
+  // if(!res.ok) {
+  //   console.log(res);
+  // }
+  return res;
 };
 
 const RotationPage = () => {
@@ -22,7 +26,7 @@ const RotationPage = () => {
 
   return (
     <main className="main">
-      <div className="pageTitle">챔피언 로테이션</div>
+      <h1 className="pageTitle">챔피언 로테이션</h1>
       <div className="cardContainer grid-cols-5 gap-16">
         {champions.map((champion: addImgChampion) => {
           return <ChampionCard key={champion.id} champion={champion} />;

@@ -20,18 +20,20 @@ export interface Champion {
     magic: number;
     difficulty: number;
   };
-  image: {
-    full: string;
-    sprite: string;
-    group: string;
-    x: number;
-    y: number;
-    w: number;
-    h: number;
-  };
+  image: Image;
   tags: string[];
   partype: string;
   stats: object;
+}
+
+export interface Image {
+  full: string;
+  sprite: string;
+  group: string;
+  x: number;
+  y: number;
+  w: number;
+  h: number;
 }
 
 export interface addImgChampion extends Champion {
@@ -52,15 +54,7 @@ export interface ChampionDetail {
   key: string;
   name: string;
   title: string;
-  image: {
-    full: string;
-    sprite: string;
-    group: string;
-    x: number;
-    y: number;
-    w: number;
-    h: number;
-  };
+  image: Image;
   skins: object[];
   lore: string;
   blurb: string;
@@ -75,7 +69,21 @@ export interface ChampionDetail {
     difficulty: number;
   };
   stats: object;
-  spells: object[];
-  passive: object;
+  spells: Spell[];
+  passive: Passive;
   recommend: [];
+}
+
+export interface Spell {
+  id: string;
+  name: string;
+  description: string;
+  image: Image;
+  resource: string;
+}
+
+export interface Passive {
+  name: string;
+  description: string;
+  image: Image;
 }

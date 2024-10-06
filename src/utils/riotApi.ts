@@ -8,9 +8,9 @@ export async function getChampionRotation(baseUrl: string) {
 
   const res = await fetch(`${baseUrl}/api/rotation`);
 
-  if (!res.ok) {
-    throw new Error(`HTTP error! status: ${res.status}`);
-  }
+  // if (!res.ok) {
+  //   return { message: "please refresh this page" }
+  // }
 
   const rotationData: RotationChampionList = await res.json();
 

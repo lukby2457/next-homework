@@ -28,12 +28,31 @@ body {
     @apply text-3xl font-bold text-red-500 mb-5
   }
   .cardContainer {
-    @apply grid mx-auto justify-items-center mb-10
+    @apply grid mx-auto justify-items-center mb-10;
+    grid-template-rows: auto 1fr auto;
   }
   .cardTitle {
     @apply text-2xl text-red-500 mx-2 mt-2
   }
   .cardContent {
-    @apply text-lg text-gray-500 mx-2 mt-2
+    @apply text-lg text-gray-500 mx-2 mt-2;
+  }
+  .barContainer {
+    width: 810px;
+    height: 30px; /* 원하는 막대 높이 */
+    border: 1px solid #c8aa6e;
+  }
+  .bar {
+    height: 100%;
+    background-color: #c8aa6e; /* 막대 색상 */
+    position: relative; /* 자식 요소인 숫자를 절대 위치로 배치할 수 있게 설정 */
+  }
+  .barValue {
+    position: absolute;
+    right: 10px; /* 막대 끝에서 30px 떨어진 곳에 숫자를 표시 */
+    top: 50%;
+    transform: translateY(-50%); /* 숫자를 세로 중앙 정렬 */
+    font-weight: bold;
+    color: white;
   }
 }
