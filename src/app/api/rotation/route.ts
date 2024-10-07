@@ -1,6 +1,6 @@
 import { ChampionRotation } from "@/types/ChampionRotation";
 
-const RIOT_API_KEY: string | undefined = process.env.RIOT_API_KEY;
+const RIOT_API_KEY: string | undefined = process.env.NEXT_PUBLIC_RIOT_API_KEY;
 
 export async function GET() {
   try {
