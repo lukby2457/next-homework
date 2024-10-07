@@ -3,7 +3,7 @@
 - LoL_Information
 
 ## 배포 주소
-<>
+<https://next-homework-khaki.vercel.app/>
 
 ## 개발 기간 ⏲️
 
