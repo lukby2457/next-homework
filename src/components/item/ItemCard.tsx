@@ -1,6 +1,5 @@
 import { BASE_URL } from "@/public/static";
 import { Item } from "@/types/Items";
-import Image from "next/image";
 import React from "react";
 
 const ItemCard = ({ item, version }: { item: Item, version: string }) => {
@@ -8,12 +7,10 @@ const ItemCard = ({ item, version }: { item: Item, version: string }) => {
     <div
       className="w-[170px] min-h-[150px] max-h-[500px] border-white border-[1px]"
     >
-      <Image
+      <img
         src={`${BASE_URL}/${version}/img/item/${item.image.full}`}
         alt={item.image.full}
-        width={100}
-        height={100}
-        className="mx-auto mt-5"
+        className="mx-auto mt-5 w-[100px]"
       />
       <div className="flex flex-col justify-between">
         <h4 className="cardTitle text-xl">{item.name}</h4>
